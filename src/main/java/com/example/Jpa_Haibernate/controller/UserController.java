@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
+@CrossOrigin(origins = "http://localhost:5000")
 @RestController
 @RequestMapping("/rest")
 public class UserController {
@@ -18,28 +19,28 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/user")
+    @GetMapping("/employees")
     public ResponseEntity<List<UserModel>> findAllUser(){
         return ResponseEntity.ok().body(userService.findAllUser());
     }
 
-    @GetMapping("/user/{id}")
+    @GetMapping("/employees/{id}")
     public ResponseEntity<Optional<UserModel>> findUserById(@PathVariable("id") long id){
         return ResponseEntity.ok().body(userService.findUserById(id));
     }
 
-    @PutMapping("/user/{id}")
+    @PutMapping("/employees/{id}")
     public ResponseEntity<UserModel> updatedUser(@PathVariable("id") long id, @RequestBody UserModel userModel){
         userModel.setId(id);
         return ResponseEntity.ok().body(userService.updateUser(userModel));
     }
 
-    @PostMapping("/user")
+    @PostMapping("/employees")
     public ResponseEntity<UserModel> createUser(@RequestBody UserModel userModel){
         return ResponseEntity.ok().body(userService.insertUser(userModel));
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/employees/{id}")
     public HttpStatus deleteUser(@PathVariable("id") long id){
         userService.deleteUser(id);
         return HttpStatus.OK;

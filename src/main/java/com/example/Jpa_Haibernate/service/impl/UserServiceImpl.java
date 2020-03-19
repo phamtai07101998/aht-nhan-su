@@ -28,8 +28,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserModel insertUser(UserModel userModel) {
-        userDAO.save(userModel);
-        return userModel;
+
+        return userDAO.save(userModel);
     }
 
     @Override

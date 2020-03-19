@@ -1,6 +1,7 @@
 package com.example.Jpa_Haibernate.model;
 
 import lombok.*;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.*;
 
@@ -33,5 +34,31 @@ public class UserModel {
     @Column(name = "city")
     private String city;
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }
