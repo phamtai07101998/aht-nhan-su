@@ -11,9 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://localhost:5000")
 @RestController
-@RequestMapping("/rest")
 public class UserController {
 
     @Autowired
@@ -22,6 +20,10 @@ public class UserController {
     @GetMapping("/employees")
     public ResponseEntity<List<UserModel>> findAllUser(){
         return ResponseEntity.ok().body(userService.findAllUser());
+    }
+    @GetMapping("/")
+    public String Hello(){
+        return "Hello World";
     }
 
     @GetMapping("/employees/{id}")
