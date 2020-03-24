@@ -143,8 +143,5 @@
       }
     }
   },
-  "defaultProject": "angular-spring-btl",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "angular-spring-btl"
 }
