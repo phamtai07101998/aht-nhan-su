@@ -101,7 +101,7 @@
                 <mat-form-field appearance="outline">
                   <mat-label>Tên Bộ Phận</mat-label>
                   <select matNativeControl formControlName="partsId"
-                    [ngClass]="{'is-invalid':form.get(partsId').touched && form.get(partsId').invalid}"
+                    [ngClass]="{'is-invalid':form.get('partsId').touched && form.get('partsId').invalid}"
                     required>
                     <option *ngFor="let part of parts | async" [value]="part.partsId">{{part.partsName}}</option>
                   </select>
