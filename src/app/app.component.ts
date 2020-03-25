@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   test = false;
   info: any;
-  private authority: string;
+  authority: string;
   roles: string[];
   constructor(private token: TokenStorageService, private router: Router) { }
   title = 'Quan Ly Nhan Su';
