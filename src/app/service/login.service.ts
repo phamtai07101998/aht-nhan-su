@@ -6,7 +6,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class LoginService {
-  private baseUrl = 'https://aht-nhan-su.herokuapp.com/rest/contractEmp';
+  private baseUrl = 'https://aht-nhan-su.herokuapp.com/rest/login/signin';
   constructor(private http: HttpClient) { }
 
   authenticate(username : string, password : string) {
