@@ -59,7 +59,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let emp of contractEmps | async" [ngSwitch]="emp.employee.empSex">
-                                <td>{{stt}}</td>
+                                <td></td>
                                 <td>{{emp.employee.empName}}</td>
                                 <td *ngSwitchCase="0">Nam</td>
                                 <td *ngSwitchCase="1">Nữ</td>

@@ -44,7 +44,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let emp of employees | async" [ngSwitch]="emp.empSex">
-                                <td>{{stt}}</td>
+                                <td>1</td>
                                 <td>{{emp.empName}}</td>
                                 <td *ngSwitchCase="0">Nam</td>
                                 <td *ngSwitchCase="1">Nữ</td>
@@ -208,13 +208,13 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Phòng Ban</mat-label>
                                     <select matNativeControl formControlName="departmentId"
-                                        [ngClass]="{'is-invalid':form.get('department','departmentId').touched && form.get('department','departmentId').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('departmentId').touched && form.get('departmentId').invalid}"
                                         required>
                                         <option *ngFor="let depart of departments | async"
                                             [value]="depart.departmentId">
                                             {{depart.departmentName}}</option>
                                     </select>
-                                    <mat-error *ngIf="form.get('empNumberInsurance').errors">
+                                    <mat-error *ngIf="form.get('departmentId').errors">
                                         Không được trống
                                     </mat-error>
                                 </mat-form-field>
@@ -367,13 +367,13 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Phòng Ban</mat-label>
                                     <select matNativeControl formControlName="departmentId"
-                                        [ngClass]="{'is-invalid':form.get('department','departmentId').touched && form.get('department','departmentId').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('departmentId').touched && form.get('departmentId').invalid}"
                                         required>
                                         <option *ngFor="let depart of departments | async"
                                             [value]="depart.departmentId">
                                             {{depart.departmentName}}</option>
                                     </select>
-                                    <mat-error *ngIf="form.get('empNumberInsurance').errors">
+                                    <mat-error *ngIf="form.get('departmentId').errors">
                                         Không được trống
                                     </mat-error>
                                 </mat-form-field>
