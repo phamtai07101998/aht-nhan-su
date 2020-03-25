@@ -29,6 +29,7 @@ import { SideLeftComponent } from './pages/side-left/side-left.component';
 
 import { httpInterceptorProviders } from './auth/auth-interceptor';
 import { AuthGuard } from './auth.guard';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
