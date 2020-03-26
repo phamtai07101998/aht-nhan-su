@@ -367,13 +367,13 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Phòng Ban</mat-label>
                                     <select matNativeControl formControlName="departmentId"
-                                        [ngClass]="{'is-invalid':form.get('departmentId').touched && form.get('departmentId').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('department.departmentId').touched && form.get('department.departmentId').invalid}"
                                         required>
                                         <option *ngFor="let depart of departments | async"
                                             [value]="depart.departmentId">
                                             {{depart.departmentName}}</option>
                                     </select>
-                                    <mat-error *ngIf="form.get('departmentId').errors">
+                                    <mat-error *ngIf="form.get('department.departmentId').errors">
                                         Không được trống
                                     </mat-error>
                                 </mat-form-field>

@@ -144,10 +144,10 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Mã hợp đồng</mat-label>
                                     <input matInput formControlName="contractCode"
-                                        [ngClass]="{'is-invalid':form.get('contractCode').touched && form.get('contractCode').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('contract.contractCode').touched && form.get('contract.contractCode').invalid}"
                                         required>
 
-                                    <mat-error *ngIf="form.get('contractCode').errors">
+                                    <mat-error *ngIf="form.get('contract.contractCode').errors">
                                         Không được trống
                                     </mat-error>
                                     <!-- <mat-error *ngIf="form.get('contractCode').maxLength">
@@ -163,7 +163,7 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Loại hợp đồng</mat-label>
                                     <select matNativeControl formControlName="contractType"
-                                        [ngClass]="{'is-invalid':form.get('contractType').touched && form.get('contractType').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('contract.contractType').touched && form.get('contract.contractType').invalid}"
                                         required>
                                         <option required [value]="1" selected>
                                             Thực tập
@@ -175,7 +175,7 @@
                                             Nhân viên
                                         </option>
                                     </select>
-                                    <mat-error *ngIf="form.get('contractType').errors">
+                                    <mat-error *ngIf="form.get('contract.contractType').errors">
                                         Vui lòng chọn
                                     </mat-error>
                                 </mat-form-field>
@@ -190,13 +190,13 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Nhân viên</mat-label>
                                     <select matNativeControl formControlName="empId"
-                                        [ngClass]="{'is-invalid':form.get('empId').touched && form.get('empId').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('employee.empId').touched && form.get('employee.empId').invalid}"
                                         required>
                                         <option *ngFor="let employee of employees | async" [value]="employee.empId">
                                             {{employee.empName}}
                                         </option>
                                     </select>
-                                    <mat-error *ngIf="form.get('empId').errors">
+                                    <mat-error *ngIf="form.get('employee.empId').errors">
                                         Vui lòng chọn
                                     </mat-error>
                                 </mat-form-field>
@@ -268,10 +268,10 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Mã hợp đồng</mat-label>
                                     <input matInput formControlName="contractCode"
-                                        [ngClass]="{'is-invalid':form.get('contractCode').touched && form.get('contractCode').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('contract.contractCode').touched && form.get('contract.contractCode').invalid}"
                                         required>
 
-                                    <mat-error *ngIf="form.get('contractCode').errors">
+                                    <mat-error *ngIf="form.get('contract.contractCode').errors">
                                         Không được trống
                                     </mat-error>
                                     <!-- <mat-error *ngIf="form.get('contractCode').max">
@@ -287,7 +287,7 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Loại hợp đồng</mat-label>
                                     <select matNativeControl formControlName="contractType"
-                                        [ngClass]="{'is-invalid':form.get('contractType').touched && form.get('contractType').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('contract.contractType').touched && form.get('contract.contractType').invalid}"
                                         required>
                                         <option required [value]="1" selected>
                                             Thực tập
@@ -299,7 +299,7 @@
                                             Nhân viên
                                         </option>
                                     </select>
-                                    <mat-error *ngIf="form.get('contractType').errors">
+                                    <mat-error *ngIf="form.get('contract.contractType').errors">
                                         Vui lòng chọn
                                     </mat-error>
                                 </mat-form-field>
@@ -314,13 +314,13 @@
                                 <mat-form-field appearance="outline">
                                     <mat-label>Nhân viên</mat-label>
                                     <select matNativeControl formControlName="empId"
-                                        [ngClass]="{'is-invalid':form.get('empId').touched && form.get('empId').invalid}"
+                                        [ngClass]="{'is-invalid':form.get('employee.empId').touched && form.get('employee.empId').invalid}"
                                         required>
                                         <option *ngFor="let employee of employees | async" [value]="employee.empId">
                                             {{employee.empName}}
                                         </option>
                                     </select>
-                                    <mat-error *ngIf="form.get('empId').errors">
+                                    <mat-error *ngIf="form.get('employee.empId').errors">
                                         Vui lòng chọn
                                     </mat-error>
                                 </mat-form-field>

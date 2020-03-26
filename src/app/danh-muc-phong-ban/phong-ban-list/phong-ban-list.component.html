@@ -101,11 +101,11 @@
                 <mat-form-field appearance="outline">
                   <mat-label>Tên Bộ Phận</mat-label>
                   <select matNativeControl formControlName="partsId"
-                    [ngClass]="{'is-invalid':form.get('partsId').touched && form.get('partsId').invalid}"
+                    [ngClass]="{'is-invalid':form.get('parts.partsId').touched && form.get('parts.partsId').invalid}"
                     required>
                     <option *ngFor="let part of parts | async" [value]="part.partsId">{{part.partsName}}</option>
                   </select>
-                  <mat-error *ngIf="form.get('partsId').errors">
+                  <mat-error *ngIf="form.get('parts.partsId').errors">
                     Không được trống
                   </mat-error>
                 </mat-form-field>
@@ -160,11 +160,11 @@
                 <mat-form-field appearance="outline">
                   <mat-label>Tên Bộ Phận</mat-label>
                   <select matNativeControl formControlName="partsId"
-                    [ngClass]="{'is-invalid':form.get('partsId').touched && form.get('partsId').invalid}"
+                    [ngClass]="{'is-invalid':form.get('parts.partsId').touched && form.get('parts.partsId').invalid}"
                     required>
                     <option *ngFor="let part of parts | async" [value]="part.partsId">{{part.partsName}}</option>
                   </select>
-                  <mat-error *ngIf="form.get('partsId').errors">
+                  <mat-error *ngIf="form.get('parts.partsId').errors">
                     Không được trống
                   </mat-error>
                 </mat-form-field>
