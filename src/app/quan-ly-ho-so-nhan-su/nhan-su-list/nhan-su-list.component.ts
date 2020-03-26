@@ -30,7 +30,7 @@ export class NhanSuListComponent implements OnInit {
     empDob: ['', Validators.required],
     empName: ['', Validators.required],
     empNumberInsurance: ['', Validators.required],
-    empPhone: ['', [Validators.required]],
+    empPhone: ['', [Validators.required,Validators.pattern("(09|03|07|08|05)+([0-9]{8})")]],
     empSex: ['', Validators.required],
     empType: ['', Validators.required],
     department: this.formBuilder.group({
@@ -52,6 +52,18 @@ export class NhanSuListComponent implements OnInit {
 
     this.load();
     this.loadDepartment();
+  }
+
+  getErrorMessage() {
+    if (this.form.get('empPhone').hasError('required')) {
+      return 'Không được bỏ trống';
+    }
+
+    return this.form.get('empPhone').hasError('pattern') ? 'Nhập đúng định dạng' : '';
+  }
+
+  get empPhone(){
+    return this.form.get('empPhone');
   }
 
   load(){
